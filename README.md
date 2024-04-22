@@ -8,6 +8,19 @@ This is the triton server set up with ensemle methods.
 2. Post Processing Python Wrapper
 3. Ensemble Model with combined both cell counting and post processing models.
 
+### To Build for custom Python Backend
+
+```bash	
+git clone https://github.com/triton-inference-server/python_backend -b r<xx.yy>	# currently we are using r24.01
+cd python_backend
+# for GPU make sure -DTRITON_ENABLE_GPU=ON
+# for CPU make sure -DTRITON_ENABLE_GPU=OFF
+mkdir build
+cd build
+cmake -DTRITON_ENABLE_GPU=ON -DTRITON_BACKEND_REPO_TAG=r24.01 -DTRITON_COMMON_REPO_TAG=r24.01 -DTRITON_CORE_REPO_TAG=r24.01 -DCMAKE_INSTALL_PREFIX:PATH=/data/model_repo/triton_post_process/install ..
+make install
+```	
+
 ### To Run
 
 ```bash

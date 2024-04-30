@@ -50,3 +50,41 @@
 	}
   ]
 
+model_warmup [
+	{
+		name : "cell_counting sample"
+		batch_size: 1
+		inputs {
+			key: "input_tensor"
+			value: {
+				data_type: TYPE_UINT8
+				dims:  [1, 1265, 1268, 3]
+				zero_data: true
+			}
+		},
+		inputs {
+			key: "input_tensor"
+			value: {
+				data_type: TYPE_UINT8
+				dims:  [1, 1265, 1268, 3]
+				zero_data: true
+			}
+		},
+		inputs {
+			key: "input_tensor"
+			value: {
+				data_type: TYPE_UINT8
+				dims:  [1, 1265, 1268, 3]
+				zero_data: true
+			}
+		},
+		inputs {
+			key: "input_tensor"
+			value: {
+				data_type: TYPE_UINT8
+				dims:  [1, 1265, 1268, 3]
+				zero_data: true
+			}
+		},
+	}
+]

@@ -1,6 +1,7 @@
 ## Triton Server Ensemble
 
 This is the triton server set up with ensemle methods.
+> Note: need to create model repo in /data/model_repo.
 
 ### List for model in model repo
 
